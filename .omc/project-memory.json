@@ -1,0 +1,117 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1770718198095,
+  "projectRoot": "/home/johnson/code/anyrouter-check-in",
+  "techStack": {
+    "languages": [
+      {
+        "name": "Python",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "pyproject.toml"
+        ]
+      }
+    ],
+    "frameworks": [
+      {
+        "name": "pytest",
+        "version": null,
+        "category": "testing"
+      }
+    ],
+    "packageManager": null,
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": null,
+    "testCommand": "pytest",
+    "lintCommand": "ruff check",
+    "devCommand": null,
+    "scripts": {}
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": null,
+    "testPattern": null,
+    "fileOrganization": null
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [
+      "assets",
+      "tests"
+    ],
+    "gitBranches": {
+      "defaultBranch": "main",
+      "branchingStrategy": null
+    }
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "assets": {
+      "path": "assets",
+      "purpose": "Static assets",
+      "fileCount": 3,
+      "lastAccessed": 1770718198078,
+      "keyFiles": [
+        "check-in.png",
+        "request-api-user.png",
+        "request-session.png"
+      ]
+    },
+    "tests": {
+      "path": "tests",
+      "purpose": "Test files",
+      "fileCount": 1,
+      "lastAccessed": 1770718198081,
+      "keyFiles": [
+        "test_notify.py"
+      ]
+    },
+    "utils": {
+      "path": "utils",
+      "purpose": "Utility functions",
+      "fileCount": 2,
+      "lastAccessed": 1770718198085,
+      "keyFiles": [
+        "config.py",
+        "notify.py"
+      ]
+    }
+  },
+  "hotPaths": [
+    {
+      "path": ".",
+      "accessCount": 6,
+      "lastAccessed": 1770718435509,
+      "type": "directory"
+    },
+    {
+      "path": "utils/notify.py",
+      "accessCount": 4,
+      "lastAccessed": 1770718596256,
+      "type": "file"
+    },
+    {
+      "path": ".env.example",
+      "accessCount": 2,
+      "lastAccessed": 1770718623115,
+      "type": "file"
+    },
+    {
+      "path": "README.md",
+      "accessCount": 1,
+      "lastAccessed": 1770718423798,
+      "type": "file"
+    },
+    {
+      "path": "utils/config.py",
+      "accessCount": 1,
+      "lastAccessed": 1770718488322,
+      "type": "file"
+    }
+  ],
+  "userDirectives": []
+}

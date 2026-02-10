@@ -26,6 +26,7 @@ class NotificationKit:
 		self.telegram_chat_id = os.getenv('TELEGRAM_CHAT_ID')
 		self.bark_key = os.getenv('BARK_KEY')
 		self.bark_server = os.getenv('BARK_SERVER', 'https://api.day.app')
+		self.n8n_webhook = os.getenv('N8N_WEBHOOK')
 
 	def send_email(self, title: str, content: str, msg_type: Literal['text', 'html'] = 'text'):
 		if not self.email_user or not self.email_pass or not self.email_to:
@@ -140,6 +141,14 @@ class NotificationKit:
 		with httpx.Client(timeout=30.0) as client:
 			client.post(url, json=data)
 
+	def send_n8n(self, title: str, content: str):
+		if not self.n8n_webhook:
+			raise ValueError('n8n Webhook URL not configured')
+
+		message = f'{title}\n{content}'
+		with httpx.Client(timeout=30.0) as client:
+			client.get(self.n8n_webhook, params={'message': message})
+
 	def push_message(self, title: str, content: str, msg_type: Literal['text', 'html'] = 'text'):
 		notifications = [
 			('Email', lambda: self.send_email(title, content, msg_type)),
@@ -151,6 +160,7 @@ class NotificationKit:
 			('Gotify', lambda: self.send_gotify(title, content)),
 			('Telegram', lambda: self.send_telegram(title, content)),
 			('Bark', lambda: self.send_bark(title, content)),
+			('n8n', lambda: self.send_n8n(title, content)),
 		]
 
 		for name, func in notifications:

@@ -1,7 +1,7 @@
 name: AnyRouter 自动签到
 on:
   schedule:
-    - cron: '0 */6 * * *'
+    - cron: '0 1,9 * * *'
   workflow_dispatch:
 
 jobs:
@@ -88,6 +88,7 @@ jobs:
         GOTIFY_URL: ${{ secrets.GOTIFY_URL }}
         GOTIFY_TOKEN: ${{ secrets.GOTIFY_TOKEN }}
         GOTIFY_PRIORITY: ${{ secrets.GOTIFY_PRIORITY }}
+        N8N_WEBHOOK: ${{ secrets.N8N_WEBHOOK }}
       run: |
         uv run checkin.py
 
