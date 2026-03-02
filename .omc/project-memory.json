@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastScanned": 1770718198095,
+  "lastScanned": 1772444945743,
   "projectRoot": "/home/johnson/code/anyrouter-check-in",
   "techStack": {
     "languages": [
@@ -54,7 +54,7 @@
       "path": "assets",
       "purpose": "Static assets",
       "fileCount": 3,
-      "lastAccessed": 1770718198078,
+      "lastAccessed": 1772444945727,
       "keyFiles": [
         "check-in.png",
         "request-api-user.png",
@@ -65,7 +65,7 @@
       "path": "tests",
       "purpose": "Test files",
       "fileCount": 1,
-      "lastAccessed": 1770718198081,
+      "lastAccessed": 1772444945739,
       "keyFiles": [
         "test_notify.py"
       ]
@@ -74,7 +74,7 @@
       "path": "utils",
       "purpose": "Utility functions",
       "fileCount": 2,
-      "lastAccessed": 1770718198085,
+      "lastAccessed": 1772444945740,
       "keyFiles": [
         "config.py",
         "notify.py"
@@ -83,33 +83,15 @@
   },
   "hotPaths": [
     {
-      "path": ".",
-      "accessCount": 6,
-      "lastAccessed": 1770718435509,
-      "type": "directory"
+      "path": "checkin.py",
+      "accessCount": 2,
+      "lastAccessed": 1772445214894,
+      "type": "file"
     },
     {
       "path": "utils/notify.py",
-      "accessCount": 4,
-      "lastAccessed": 1770718596256,
-      "type": "file"
-    },
-    {
-      "path": ".env.example",
-      "accessCount": 2,
-      "lastAccessed": 1770718623115,
-      "type": "file"
-    },
-    {
-      "path": "README.md",
       "accessCount": 1,
-      "lastAccessed": 1770718423798,
-      "type": "file"
-    },
-    {
-      "path": "utils/config.py",
-      "accessCount": 1,
-      "lastAccessed": 1770718488322,
+      "lastAccessed": 1772445092853,
       "type": "file"
     }
   ],
